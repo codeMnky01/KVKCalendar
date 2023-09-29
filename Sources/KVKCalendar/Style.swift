@@ -40,23 +40,23 @@ public struct HeaderScrollStyle {
     public var heightSubviewHeader: CGFloat = 30
     
     @available(swift, deprecated: 0.4.1, obsoleted: 0.4.2, renamed: "heightSubviewHeader")
-    public var heightTitleDate: CGFloat = 30
+    public var heightTitleDate: CGFloat { 30 }
     
     public var colorBackground: UIColor = gainsboro.withAlphaComponent(0.4)
     public var isHiddenSubview: Bool = false
     
     @available(swift, deprecated: 0.4.1, obsoleted: 0.4.2, renamed: "isHiddenSubview")
-    public var isHiddenTitleDate: Bool = false
+    public var isHiddenTitleDate: Bool { false }
     
     @available(swift, deprecated: 0.4.1, obsoleted: 0.4.2, renamed: "isHiddenSubview")
-    public var isHiddenCornerTitleDate: Bool = true
+    public var isHiddenCornerTitleDate: Bool { true }
     
     @available(swift, deprecated: 0.4.1, obsoleted: 0.4.2, renamed: "titleFormatter")
-    public var formatterTitle: DateFormatter = {
+    public var formatterTitle: DateFormatter {
         let format = DateFormatter()
         format.dateStyle = .full
         return format
-    }()
+    }
     
     public var titleFormatter: DateFormatter = {
         let format = DateFormatter()
@@ -119,11 +119,11 @@ public struct TimelineStyle {
     public var widthEventViewer: CGFloat? = nil
     
     @available(swift, deprecated: 0.4.2, obsoleted: 0.4.3, renamed: "showLineHourMode")
-    public var showCurrentLineHour: Bool = true
+    public var showCurrentLineHour: Bool { true }
     public var showLineHourMode: CurrentLineHourShowMode = .today
     
     @available(swift, deprecated: 0.4.2, obsoleted: 0.4.3, renamed: "scrollLineHourMode")
-    public var scrollToCurrentHour: Bool = true
+    public var scrollToCurrentHour: Bool { true }
     public var scrollLineHourMode: CurrentLineHourScrollMode = .today
     
     public var currentLineHourFont: UIFont = .systemFont(ofSize: 12)
@@ -141,7 +141,7 @@ public struct TimelineStyle {
     public var isEnabledCreateNewEvent: Bool = true
     
     @available(swift, deprecated: 0.5.1, obsoleted: 0.5.2, renamed: "maxLimitCachedPages")
-    public var maxLimitChachedPages: UInt = 10
+    public var maxLimitChachedPages: UInt { 10 }
     public var maxLimitCachedPages: UInt = 10
     
     public var scrollDirections: Set<ScrollDirectionType> = Set(ScrollDirectionType.allCases)
@@ -226,11 +226,11 @@ public struct WeekStyle {
 
 public struct MonthStyle {
     @available(swift, deprecated: 0.4.1, obsoleted: 0.4.2, renamed: "titleFormatter")
-    public var formatter: DateFormatter = {
+    public var formatter: DateFormatter {
         let format = DateFormatter()
         format.dateFormat = "MMMM yyyy"
         return format
-    }()
+    }
     
     public var titleFormatter: DateFormatter = {
         let format = DateFormatter()
@@ -279,7 +279,7 @@ public struct MonthStyle {
     public var isScrollEnabled: Bool = true
     
     @available(swift, deprecated: 0.4.7, obsoleted: 0.4.8, renamed: "autoSelectionDateWhenScrolling")
-    public var isAutoSelectDateScrolling: Bool = false
+    public var isAutoSelectDateScrolling: Bool { false }
     public var autoSelectionDateWhenScrolling: Bool = false
     
     public var eventCorners: UIRectCorner = .allCorners
@@ -305,11 +305,11 @@ public struct MonthStyle {
 
 public struct YearStyle {
     @available(swift, deprecated: 0.4.1, obsoleted: 0.4.2, renamed: "titleFormatter")
-    public var formatter: DateFormatter = {
+    public var formatter: DateFormatter {
         let format = DateFormatter()
         format.dateFormat = "yyyy"
         return format
-    }()
+    }
     public var titleFormatter: DateFormatter = {
         let format = DateFormatter()
         format.dateFormat = "yyyy"
@@ -377,13 +377,13 @@ public struct AllDayStyle {
     public var textColor: UIColor = .black
     
     @available(swift, deprecated: 0.5.0, obsoleted: 0.5.1)
-    public var backgroundColorEvent: UIColor = .clear
+    public var backgroundColorEvent: UIColor { .clear }
     
     @available(swift, deprecated: 0.5.0, obsoleted: 0.5.1)
-    public var font: UIFont = .systemFont(ofSize: 12)
+    public var font: UIFont { .systemFont(ofSize: 12) }
     
     public var offsetWidth: CGFloat = 2
-    public var offsetHeight: CGFloat = 2    
+    public var offsetHeight: CGFloat = 2
     public var offsetX: CGFloat = 0
     public var height: CGFloat = 25
     public var maxHeight: CGFloat = 70
@@ -394,7 +394,7 @@ public struct AllDayStyle {
     public var isHiddenStubEvent: Bool = true
     
     @available(swift, deprecated: 0.5.0, obsoleted: 0.5.1)
-    public var axis: AxisMode = .vertical
+    public var axis: AxisMode { .vertical }
     
     @available(swift, deprecated: 0.5.0)
     public enum AxisMode: Int {
@@ -406,7 +406,7 @@ public struct AllDayStyle {
 
 public struct EventStyle {
     @available(swift, deprecated: 0.3.8, obsoleted: 0.3.9, renamed: "states")
-    public var isEnableMoveEvent: Bool = true
+    public var isEnableMoveEvent: Bool { true }
     
     public var minimumPressDuration: TimeInterval = 0.5
     public var alphaWhileMoving: CGFloat = 0.5
